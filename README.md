@@ -1,15 +1,16 @@
 # 字节跳动穿山甲广告 Flutter版本
 
 <p>
-<a href="https://pub.flutter-io.cn/packages/flutter_unionad"><img src=https://img.shields.io/pub/v/flutter_unionad?color=orange></a>
-<a href="https://pub.flutter-io.cn/packages/flutter_unionad"><img src=https://img.shields.io/pub/likes/flutter_unionad></a>
-<a href="https://pub.flutter-io.cn/packages/flutter_unionad"><img src=https://img.shields.io/pub/points/flutter_unionad></a>
+<a href="https://pub.dev/packages/flutter_unionad"><img src=https://img.shields.io/pub/v/flutter_unionad?color=orange></a>
+<a href="https://pub.dev/packages/flutter_unionad"><img src=https://img.shields.io/pub/likes/flutter_unionad></a>
+<a href="https://pub.dev/packages/flutter_unionad"><img src=https://img.shields.io/pub/points/flutter_unionad></a>
 <a href="https://github.com/gstory0404/flutter_unionad/commits"><img src=https://img.shields.io/github/last-commit/gstory0404/flutter_unionad></a>
 <a href="https://github.com/gstory0404/flutter_unionad"><img src=https://img.shields.io/github/stars/gstory0404/flutter_unionad></a>
 </p>
 <p>
 <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VhD0AZSmzvsD3fu7CeQFkzpBQHMHANb1&authKey=W7JGJ0HKklyhP1jyBvbTF2Dkw0cq4UmhVSx2zXVdIm6n48Xrto%2B7%2B1n9jbkAadyF&noverify=0&group_code=649574038"><img src=https://img.shields.io/badge/flutter%E4%BA%A4%E6%B5%81%E7%BE%A4-649574038-blue></a>
 <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=9I9lyXewEsEnx0f00EOF_9hEcFmG5Bmg&authKey=AJfQ8%2FhOLcoJ0p5B16EITjFav1IIs3UAerZSUsWZfa0evuklgxibHti51AYlZgI3&noverify=0&group_code=769626410"><img src=https://img.shields.io/badge/flutter%E4%BA%A4%E6%B5%81%E7%BE%A42-769626410-blue></a>
+<a href="https://qm.qq.com/q/4MSgZuKimc"><img src=https://img.shields.io/badge/flutter%E5%B9%BF%E5%91%8A%E4%BA%A4%E6%B5%81-662186116-blue></a>
 </p>
 
 <img src="https://github.com/gstory0404/flutter_unionad/blob/master/image/demo.gif" width="30%">
@@ -30,6 +31,8 @@
 [插件更新调整](https://github.com/gstory0404/flutter_unionad/blob/master/notice.md)
 
 ⚠️ 由于融合SDK与旧版部分api不兼容，[2.0.0](https://github.com/gstory0404/flutter_unionad/blob/master/CHANGELOG.md)改动较大,更新后注意查看文档说明
+
+⚠️ 用gromore来创建广告位，使用gromore id来展示广告
 
 ## 本地开发环境
 ```
@@ -333,10 +336,10 @@ FlutterUnionad.loadRewardVideoAd(
         },
         onReady: () async{
           print("激励广告预加载准备就绪");
+          await FlutterUnionad.showRewardVideoAd();
         }, 
         onCache: () async {
           print("激励广告物料缓存成功。建议在这里进行广告展示，可保证播放流畅和展示流畅，用户体验更好。");
-          await FlutterUnionad.showRewardVideoAd();
         },
         onUnReady: (){
           print("激励广告预加载未准备就绪");
